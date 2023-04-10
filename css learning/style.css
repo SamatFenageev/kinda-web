@@ -1,0 +1,21 @@
+html{
+	background-image: url("discordPic.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	/*background: linear-gradient(lightblue, blue);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;*/
+}
+p{
+	color: white;
+	border: 2px dotted;
+	box-shadow: 5px 5px 5px;
+}
+h1{
+	background:linear-gradient(lightblue, blue);
+	color: #87f37e;
+}

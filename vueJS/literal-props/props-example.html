@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come on</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-component :num="myNumber" :str="passedString" :even="myNumber" :obj="passedObject"></my-component>
+    </div>
+
+    <script>
+        const MyComponent = {
+            template:'<div>Number: {{num}}<br>String:{{str}} <br>IsEven?: {{even}}<br> Object:{{obj.message}}</div>',
+            props:{
+                num:{
+                    type:Number,
+                    required:true
+                },
+                str:{
+                    type:String,
+                    default:"hello World"
+                },
+                obj:{
+                    type:Object,
+                    default:()=>{
+                        return {message:"hello from object"}
+                    }
+                },
+                even:{
+                    validator:(value)=>{
+                        return (value % 2 === 0);
+                    }
+                }
+            }
+        }
+    
+        new Vue({
+            el:'#app',
+            comments:{'my-component':MyComponent},
+            data(){
+                return {
+                    passedString:'hello from parent',
+                    myNumber:43,
+                    passedObject:{message:'passed Object'}
+                }
+            }
+        });
+    </script>
+</body>
+</html>

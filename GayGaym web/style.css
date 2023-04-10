@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+header img{
+    height: 4rem;
+}
+header{
+    background: linear-gradient(to right bottom,#219ebc, #269ea6);
+    position:fixed;
+    width: 100%;
+    border-radius: 20px;
+    border:dashed #006d88;
+}
+
+header ul{
+    position: relative;
+    
+    display:flex;
+    justify-items: center;
+    float: right;
+    list-style-type: none;
+    
+    overflow: hidden;
+}
+
+header li{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+li a{
+    color: #ffc100;
+    font-family: 'Aldrich', sans-serif;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+main{
+	display: flex;
+    height: 50em;
+	align-items: center;
+	justify-content: center;
+}
+
+.info-board{
+    height: 100%;
+    width: 100%;
+    background-color: #219ebc;
+    background-image: url("GayIntro.bmp");
+	background-position: center;
+	/* background-size: cover; */
+	/* background-attachment:fixed;  */
+	/* background: linear-gradient(to right bottom, 
+		rgba(255,255,255,0.6),
+		rgba(255,255,255,0.3)); */
+	/* border-radius: 3rem; */
+}
